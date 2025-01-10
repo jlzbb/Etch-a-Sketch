@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding:7px;
+    font-size: 24px;
+    display: flex;
+    justify-self: center;
+    margin: 15px auto;
+
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of child elements */
+    border: 1px solid black;
+    width:40%;
+    justify-self: center;
+}
+
+.square {
+    border: 1px solid black;
+    aspect-ratio: 1; /* Ensures each square remains a perfect square */
+}
+
