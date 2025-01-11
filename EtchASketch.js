@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 
 function createSquare(size) {
+    container.innerHTML = "";
     for (let i = 0; i < size * size; i++) {
         const div = document.createElement("div"); 
         div.style.flex = `1 1 calc(100% / ${size})`;
@@ -39,6 +40,20 @@ function hoverEffect() {
 
         })
     )}
+
+const resetButton = document.querySelector(".btn");
+resetButton.addEventListener("click", function() {
+    const userInput = prompt("Please enter the number of Grids you would like to have!");
+    
+    if (isNaN(userInput) || userInput > 100 || userInput < 1) {
+        prompt("please enter a number between 0 and 100");
+
+    }
+    else {
+        createSquare(userInput);
+        hoverEffect();
+    }
+} );
 
 createSquare(8);
 hoverEffect();
